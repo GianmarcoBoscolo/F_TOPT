@@ -1,19 +1,19 @@
-// PROBLEM NAME // UPDATED 14/11/2024
-free_inlet_s0.9_finer
+// PROBLEM NAME // UPDATED 11/12/2024
+bifuraction_L1.0_d20
 // DIMENSION (2 or 3)
 2
 // PHYSICS MODEL (0:Stokes; 1:Navier-Stokes)
 1
 
 SAVE PDE SOLUTION (0: not save, 1: save)
-0
+1
 
 CONSOLE LOG (0: complete log, 1: efficient log, 2: no log)
 2
 
 // Time Settings
 // stationary flag (0:time_dependent, 1:stationary)
-0
+1
 // convergence scale factor
 0.8
 // Time Dependence (not relevant in stationay solution)
@@ -25,8 +25,8 @@ CONSOLE LOG (0: complete log, 1: efficient log, 2: no log)
 0.00001
 
 // FLUID PROPERTIES
-1050 //  rho
-0.004 //  mu
+10 //  rho
+1 //  mu
 
 //FORCING FUNCTIONS
 // flag Forcing: 0 constant, 1 time dependent
@@ -53,9 +53,9 @@ CONSOLE LOG (0: complete log, 1: efficient log, 2: no log)
 // INNER WALLS
 //--------
 // # INNER
-1
+3
 // geomID
-10
+5 9 13 
 
 // SYMMETRY WALLS
 //--------
@@ -78,19 +78,19 @@ CONSOLE LOG (0: complete log, 1: efficient log, 2: no log)
 // # DIRICHLET
 1
 //geomID
-13
+0
 //functs
-0.36/[0.004/2*0.004/2]*[y+0.004]*[0-y] 0
+1.5*1*4*[y+0.5]*[0.5-y] 0
 
 // NEUMANN
 //--------
 // # NEUMANN
 2
 // geomID
-0 3
+17 18
 //functs
-13332
-13332
+0 
+0
 
 // DIRICHLET - TIME DEPENDENT
 //--------
