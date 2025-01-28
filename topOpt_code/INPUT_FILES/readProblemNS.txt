@@ -1,5 +1,5 @@
 // PROBLEM NAME // UPDATED 11/12/2024
-bifuraction_L1.0_d20
+pipe_bend_L1.0_d20
 // DIMENSION (2 or 3)
 2
 // PHYSICS MODEL (0:Stokes; 1:Navier-Stokes)
@@ -25,7 +25,7 @@ CONSOLE LOG (0: complete log, 1: efficient log, 2: no log)
 0.00001
 
 // FLUID PROPERTIES
-10 //  rho
+0.1 //  rho
 1 //  mu
 
 //FORCING FUNCTIONS
@@ -53,9 +53,9 @@ CONSOLE LOG (0: complete log, 1: efficient log, 2: no log)
 // INNER WALLS
 //--------
 // # INNER
-3
+2
 // geomID
-5 9 13 
+5 10 
 
 // SYMMETRY WALLS
 //--------
@@ -80,17 +80,16 @@ CONSOLE LOG (0: complete log, 1: efficient log, 2: no log)
 //geomID
 0
 //functs
-1.5*1*4*[y+0.5]*[0.5-y] 0
+1.5*1*4*[y-1]*[2-y] 0
 
 // NEUMANN
 //--------
 // # NEUMANN
-2
+1
 // geomID
-17 18
+9
 //functs
 0 
-0
 
 // DIRICHLET - TIME DEPENDENT
 //--------
